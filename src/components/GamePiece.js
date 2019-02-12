@@ -4,7 +4,6 @@ function GamePiece(props) {
   console.log(props);
   return (
     <span>
-      {/* <h3>{props.name}</h3> */}
       <input
         key={props.id}
         type="image"
