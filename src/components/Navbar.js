@@ -20,7 +20,6 @@ class Navbar extends React.Component {
             <a className="navbar-brand" href="#">
               React Clicky Game
             </a>
-            <span className="gameHeader">Click on any image to start</span>
             <span className="scoreBoard">Score:</span>
           </div>
         </nav>

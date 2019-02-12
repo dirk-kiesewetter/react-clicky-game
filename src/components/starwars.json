@@ -1,0 +1,30 @@
+[
+  { "id": 1, "name": "Awing", "link": "../assets/images/a-wing.png" },
+  { "id": 2, "name": "Bwing", "link": "../assets/images/b-wing.jpg" },
+  {
+    "id": 3,
+    "name": "Corvette",
+    "link": "../assets/images/corellian_corvette.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Falcon",
+    "link": "../assets/images/millennium-falcon.jpg"
+  },
+  { "id": 5, "name": "Shuttle", "link": "../assets/images/shuttle.jpg" },
+  { "id": 6, "name": "DeathStar", "link": "../assets/images/death-star.jpg" },
+  { "id": 7, "name": "SSD", "link": "../assets/images/ssd.jpg" },
+  { "id": 8, "name": "Ywing", "link": "../assets/images/y-wing.jpg" },
+  { "id": 9, "name": "TIE", "link": "../assets/images/tie-fighter.jpg" },
+  {
+    "id": 10,
+    "name": "TieInt",
+    "link": "../assets/images/tie-interceptor.jpg"
+  },
+  {
+    "id": 11,
+    "name": "StarDestroyer",
+    "link": "../assets/images/stardestroyer.jpg"
+  },
+  { "id": 12, "name": "Xwing", "link": "../assets/images/xwing.jpg" }
+]
