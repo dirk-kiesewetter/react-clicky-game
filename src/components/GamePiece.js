@@ -3,18 +3,19 @@ import React from "react";
 function GamePiece(props) {
   console.log(props);
   return (
-    <div>
-      <h1>test</h1>
+    <span>
+      {/* <h3>{props.name}</h3> */}
       <input
+        key={props.id}
         type="image"
         className="imgBtn"
-        name={props[0].name}
-        src={props[0].link}
+        name={props.name}
+        src={props.src}
         alt="Submit"
-        width="150"
-        height="150"
+        width="170"
+        height="170"
       />
-    </div>
+    </span>
   );
 }
 

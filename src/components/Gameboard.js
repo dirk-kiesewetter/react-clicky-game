@@ -1,98 +1,26 @@
 import React from "react";
+import starwars from "./starwars.json";
+import GamePiece from "./GamePiece";
 
 class Gameboard extends React.Component {
+  state = { starwars };
+
   render() {
     return (
-      <div id="gamePieces">
+      <div>
         <br />
         <h1 className="gameHeader">Click on any image to start</h1>
         <h2>Click only on images that you haven't clicked yet.</h2>
-
-        {/* <GamePiece /> */}
-        {/* <input
-          type="image"
-          className="imgBtn"
-          src={Bwing}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-
-       
-        <input
-          type="image"
-          className="imgBtn"
-          src={Shuttle}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <br />
-        <input
-          type="image"
-          className="imgBtn"
-          src={DeathStar}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <input
-          type="image"
-          className="imgBtn"
-          src={SSD}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <input
-          type="image"
-          className="imgBtn"
-          src={Ywing}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <input
-          type="image"
-          className="imgBtn"
-          src={TIE}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <br />
-        <input
-          type="image"
-          className="imgBtn"
-          src={TieInt}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <input
-          type="image"
-          className="imgBtn"
-          src={StarDestroyer}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <input
-          type="image"
-          className="imgBtn"
-          src={Xwing}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
-        <input
-          type="image"
-          className="imgBtn"
-          src={Corvette}
-          alt="Submit"
-          width="150"
-          height="150"
-        /> */}
+        <hr />
+        <div className="container">
+          {this.state.starwars.map(starwars => (
+            <GamePiece
+              key={starwars.id}
+              name={starwars.name}
+              src={starwars.link}
+            />
+          ))}
+        </div>
       </div>
     );
   }

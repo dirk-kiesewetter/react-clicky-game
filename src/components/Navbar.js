@@ -4,7 +4,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-black">
           <button
             className="navbar-toggler"
             type="button"
@@ -20,7 +20,10 @@ class Navbar extends React.Component {
             <a className="navbar-brand" href="#">
               React Clicky Game
             </a>
-            <span className="scoreBoard">Score:</span>
+            <span className="scoreBoard">
+              Score:
+              <span id="scoreWindow" />
+            </span>
           </div>
         </nav>
       </div>
