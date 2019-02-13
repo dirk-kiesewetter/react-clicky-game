@@ -4,12 +4,55 @@ import GamePiece from "./GamePiece";
 
 //variable from the json for randomizing the object order
 let starWarsImages = starwars;
-console.log("swi", starWarsImages);
+// console.log("swi", starWarsImages);
 
 class Gameboard extends React.Component {
-  state = { starWarsImages };
+  state = { starWarsImages, gameScore: 0, highScore: 0 };
 
-  render() {
+  gamePieceClicked = (id) => {
+    let starWarsCopy = [...this.state.starWarsImages]
+    console.log(id)
+
+    for (let i = 0; i < starWarsCopy.length; i++) {
+      if (starWarsCopy[i].id == id) {
+        if (starWarsCopy[i].clicked) {
+          console.log("game over, man!")
+          if (this.gameScore > this.highScore) { }
+          this.gameReset();
+        }
+        else {
+          starWarsCopy[i].clicked = true;
+          let currentScore = this.state.gameScore;
+          currentScore++
+          let currentHighScore = this.state.highScore;
+          if (currentScore > currentHighScore) {
+            currentHighScore = currentScore;
+          }
+          this.setState({ starWarsImages: this.shuffleCards(starWarsCopy), gameScore: currentScore, highScore: currentHighScore });
+        }
+      }
+    }
+  }
+  shuffleCards = (starWarsCopy) => {
+    console.log("shuffling")
+    let tempArray = []
+    for (let j = 0; j < starWarsCopy.length; j++) {
+      if (Math.random() > .5) {
+        tempArray.push(starWarsCopy[j]);
+      }
+      else {
+        tempArray.unshift(starWarsCopy[j]);
+      }
+      // console.log(tempArray)
+    }
+    return tempArray;
+  }
+
+  gameReset = () => {
+    this.setState({ starWarsImages: this.shuffleCards(starWarsImages), gameScore: 0 });
+  }
+
+  render = () => {
     return (
       <div>
         <br />
@@ -19,15 +62,22 @@ class Gameboard extends React.Component {
         <div className="container">
           {this.state.starWarsImages.map(starWarsImages => (
             <GamePiece
+              id={starWarsImages.id}
               key={starWarsImages.id}
               name={starWarsImages.name}
               src={starWarsImages.link}
+              clicked={this.gamePieceClicked}
+
             />
           ))}
         </div>
       </div>
     );
   }
+
+
+
 }
+
 
 export default Gameboard;

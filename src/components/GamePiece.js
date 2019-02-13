@@ -1,11 +1,11 @@
 import React from "react";
 
 function GamePiece(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <span>
       <input
-        key={props.id}
+        id={props.id}
         type="image"
         className="imgBtn"
         name={props.name}
@@ -13,6 +13,7 @@ function GamePiece(props) {
         alt="Submit"
         width="170"
         height="170"
+        onClick={() => { props.clicked(props.id) }}
       />
     </span>
   );
@@ -20,14 +21,4 @@ function GamePiece(props) {
 
 export default GamePiece;
 
-/*
- <input
-          type="image"
-          className="imgBtn"
-          src={Falcon}
-          alt="Submit"
-          width="150"
-          height="150"
-        />
 
-        */
