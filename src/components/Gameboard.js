@@ -16,8 +16,9 @@ class Gameboard extends React.Component {
 
     for (let i = 0; i < starWarsCopy.length; i++) {
       // user loss condition
-      if (starWarsCopy[i].id === id) {
+      if (starWarsCopy[i].id == id) {
         if (starWarsCopy[i].clicked) {
+          // displays relevant game status div
           document.getElementById("correctGuessAlert").style.display = "none";
           document.getElementById("gameStartAlert").style.display = "none";
           document.getElementById("incorrectGuessAlert").style.display = "block";
@@ -34,8 +35,6 @@ class Gameboard extends React.Component {
           document.getElementById("incorrectGuessAlert").style.display = "none";
           document.getElementById("correctGuessAlert").style.display = "block";
           document.getElementById("gameStartAlert").style.display = "none";
-
-
 
           let currentScore = this.state.gameScore;
           currentScore++
@@ -70,14 +69,13 @@ class Gameboard extends React.Component {
       document.getElementById("incorrectGuessAlert").style.display = "none";
       document.getElementById("gameStartAlert").style.display = "block";
     }, 500)
-
   }
 
   render = () => {
     return (
       <div>
         <br />
-        <div id="scoreBox"><span>your score:{this.currentScore}  |  Game high score:{this.currentHighScore}</span></div>
+        <div id="scoreBox"><span>your score: {this.currentScore}  |  Game high score: {this.currentHighScore}</span></div>
 
         <br />
         <h1 className="gameHeader">Click on an image to start, <br />but don't click on an image more than once.</h1>
@@ -100,9 +98,6 @@ class Gameboard extends React.Component {
       </div>
     );
   }
-
-
-
 }
 
 

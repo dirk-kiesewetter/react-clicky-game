@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Star Wars Clicky App
 
-## Available Scripts
+![Star Wars Clicky Game](./src/assets/images/react-clicky-game.png)
 
-In the project directory, you can run:
+## [Deployed app](https://tranquil-temple-28656.herokuapp.com/)
 
-### `npm start`
+## About the Star Wars Clicky App:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app uses React to create a memory game. There are 12 game pieces. The goal of the game is to click on all 12 without clicking on any game piece twice. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Why this app?
 
-### `npm test`
+Star Wars Clicky App was written to address the problem of how to create an interactive game that shuffles the game pieces in a random order, tracks user input, and stores the high score for that session. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technical Solutions:
 
-### `npm run build`
+- React, JavaScript, and JSX were used both for the static elements (masthead and gameboard), as well as the dynamic game pieces, scoring, and game status (you guessed correctly/You guessed incorrectly).
+- A json file contains the necessary data for each game piece.
+- Card shuffling was done with a for loop to iterate through the game piece array, a nested if/else statement and random number logic to determine if the if or else is run. A different sorting method is run with the if portion of the statement than the else portion.
+- The titlebar, gameboard, and game pieces are individual components.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Bootstrap](https://getbootstrap.com/)
+- CSS3 
+- HTML5 
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
+- [React](https://reactjs.org/) 
+- [Yarn](https://yarnpkg.com/en/) 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Authors
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Dirk Kiesewetter](https://github.com/dirk-kiesewetter)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
