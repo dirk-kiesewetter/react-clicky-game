@@ -46,9 +46,9 @@ class Gameboard extends React.Component {
           if (currentScore > currentHighScore) {
             currentHighScore = currentScore;
           };
-          if (currentHighScore === 12) {
-            this.setState({ starWarsImages: this.shuffleCards(starWarsCopy), highScore: currentHighScore });
-            alert("winner!")
+          if (currentScore === 12) {
+            this.setState({ highScore: currentHighScore });
+            // alert("winner!")
             this.gameReset()
           }
           else {
