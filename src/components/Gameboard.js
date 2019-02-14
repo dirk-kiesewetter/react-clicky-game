@@ -2,7 +2,7 @@ import React from "react";
 import starwars from "./starwars.json";
 import GamePiece from "./GamePiece";
 
-//variable from the json for randomizing the object order
+//variable from the json file for randomizing the object order
 const starWarsImages = starwars;
 // console.log("swi", starWarsImages);
 
@@ -10,23 +10,24 @@ class Gameboard extends React.Component {
   state = { starWarsImages, gameScore: 0, highScore: 0 };
 
   gamePieceClicked = (id) => {
-    //copies the array by value, not reference
+    // copies the array by value, not reference
     const starWarsCopy = [...this.state.starWarsImages]
     // console.log(id)
 
     for (let i = 0; i < starWarsCopy.length; i++) {
       // user loss condition
-      if (starWarsCopy[i].id == id) {
+      if (starWarsCopy[i].id === id) {
         if (starWarsCopy[i].clicked) {
           // displays relevant game status div
           document.getElementById("correctGuessAlert").style.display = "none";
           document.getElementById("gameStartAlert").style.display = "none";
           document.getElementById("incorrectGuessAlert").style.display = "block";
-
           console.log("game over, man!")
 
           // sets new high score
-          if (this.gameScore > this.highScore) { this.gameScore = this.highScore }
+          if (this.gameScore > this.highScore) {
+            this.gameScore = this.highScore
+          }
           this.gameReset();
         }
         else {
@@ -64,11 +65,16 @@ class Gameboard extends React.Component {
   }
 
   gameReset = () => {
+    //resets all game pieces to clicked = false
+    for (let j = 0; j < starWarsImages.length; j++) {
+      starWarsImages[j].clicked = false;
+    }
     this.setState({ starWarsImages: this.shuffleCards(starWarsImages), gameScore: 0 });
+    console.log('line 69')
     setTimeout(() => {
       document.getElementById("incorrectGuessAlert").style.display = "none";
       document.getElementById("gameStartAlert").style.display = "block";
-    }, 500)
+    }, 1000)
   }
 
   render = () => {
