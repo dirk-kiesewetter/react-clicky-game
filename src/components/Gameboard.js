@@ -3,21 +3,22 @@ import starwars from "./starwars.json";
 import GamePiece from "./GamePiece";
 
 //variable from the json for randomizing the object order
-let starWarsImages = starwars;
+const starWarsImages = starwars;
 // console.log("swi", starWarsImages);
 
 class Gameboard extends React.Component {
   state = { starWarsImages, gameScore: 0, highScore: 0 };
 
   gamePieceClicked = (id) => {
-    let starWarsCopy = [...this.state.starWarsImages]
+    //copies the array by value, not reference
+    const starWarsCopy = [...this.state.starWarsImages]
     // console.log(id)
 
     for (let i = 0; i < starWarsCopy.length; i++) {
       if (starWarsCopy[i].id == id) {
         if (starWarsCopy[i].clicked) {
           console.log("game over, man!")
-          if (this.gameScore > this.highScore) { }
+          if (this.gameScore > this.highScore) { this.gameScore = this.highScore }
           this.gameReset();
         }
         else {
@@ -56,8 +57,9 @@ class Gameboard extends React.Component {
   render = () => {
     return (
       <div>
-        <h1>your score:{this.currentScore}</h1>
-        <h1>Game high score:{this.currenthighScore}</h1>
+        <br />
+        <div id="scoreBox"><span>your score:{this.currentScore}  |  Game high score:{this.currenthighScore}</span></div>
+
         <br />
         <h1 className="gameHeader">Click on any image to start</h1>
         <h2>Click only on images that you haven't clicked yet.</h2>

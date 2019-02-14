@@ -18,12 +18,8 @@ class Navbar extends React.Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a className="navbar-brand" href="#">
-              React Clicky Game
+              Star Wars Clicky Game
             </a>
-            <span className="scoreBoard">
-              Score:
-              <span id="scoreWindow" />
-            </span>
           </div>
         </nav>
       </div>
