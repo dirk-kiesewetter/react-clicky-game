@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar";
+import Titlebar from "./components/Titlebar";
 import Gameboard from "./components/Gameboard";
 import "./App.css";
 
@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Titlebar />
         <Gameboard />
       </div>
     );

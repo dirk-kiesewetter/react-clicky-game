@@ -21,17 +21,21 @@ hr {
   width: 80%;
 }
 
-.navbar-collapse,
-.navbar {
+.titlebar {
   background-color: rgb(17, 17, 19);
   border-color: rgb(17, 17, 19);
-  border-radius: 10px;
+  height: 75px;
+  width:100%;
 }
 
-.navbar-brand,
+.titlebar-brand,
 .gameHeader {
   color: white;
   font-weight: bold;
+}
+
+.titlebar-brand {
+  font-size: 50px;
 }
 
 .gameHeader {
@@ -44,7 +48,7 @@ hr {
     font-size: 25px;
     font-weight: bold;
     height: 50px;
-    width: 75%;
+    width: 400px;
     margin: 0 auto;
     padding: 5px 0 0 0;
   }
@@ -85,10 +89,6 @@ hr {
   text-align: center;
 }
 
-.navbar-brand {
-  font-size: 50px;
-}
-
 .imgBtn {
   margin: 10px;
   border: 10px solid lightgrey;
@@ -96,10 +96,46 @@ hr {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16), 6px 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   .container {
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 1100px;
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 1000px;
   }
+}
+
+@media (max-width: 450px) {
+.containingdiv {
+  width: 375px;
+  margin: 10px;
+}
+
+.container {
+  padding: 0;
+}
+
+.titlebar {
+  width: auto;
+  margin: 0;
+}
+
+.titlebar-brand {
+  font-size: 30px;
+}
+
+.gameHeader {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+#scoreBox {
+  font-size: 25px;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 }

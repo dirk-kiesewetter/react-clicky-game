@@ -11,8 +11,8 @@ function GamePiece(props) {
         name={props.name}
         src={props.src}
         alt="Submit"
-        width="170"
-        height="170"
+        width="145"
+        height="145"
         onClick={() => { props.clicked(props.id) }}
       />
     </span>

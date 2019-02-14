@@ -15,6 +15,8 @@ class Gameboard extends React.Component {
     // console.log(id)
 
     for (let i = 0; i < starWarsCopy.length; i++) {
+      // console.log('gamescore', this.state.gameScore)
+
       // user loss condition
       if (starWarsCopy[i].id === id) {
         if (starWarsCopy[i].clicked) {
@@ -22,7 +24,6 @@ class Gameboard extends React.Component {
           document.getElementById("correctGuessAlert").style.display = "none";
           document.getElementById("gameStartAlert").style.display = "none";
           document.getElementById("incorrectGuessAlert").style.display = "block";
-          console.log("game over, man!")
 
           // sets new high score
           if (this.gameScore > this.highScore) {
@@ -40,17 +41,26 @@ class Gameboard extends React.Component {
           let currentScore = this.state.gameScore;
           currentScore++
           let currentHighScore = this.state.highScore;
+          console.log("cs:", currentScore, "chs:", currentHighScore)
+
           if (currentScore > currentHighScore) {
             currentHighScore = currentScore;
+          };
+          if (currentHighScore === 12) {
+            this.setState({ starWarsImages: this.shuffleCards(starWarsCopy), highScore: currentHighScore });
+            alert("winner!")
+            this.gameReset()
           }
-          this.setState({ starWarsImages: this.shuffleCards(starWarsCopy), gameScore: currentScore, highScore: currentHighScore });
-          console.log("cs:", currentScore, "chs:", currentHighScore)
-        }
+          else {
+            this.setState({ starWarsImages: this.shuffleCards(starWarsCopy), gameScore: currentScore, highScore: currentHighScore });
+            // console.log("cs:", currentScore, "chs:", currentHighScore)
+          };
+        };
       }
     }
   }
+
   shuffleCards = (starWarsCopy) => {
-    console.log("shuffling")
     let tempArray = []
     for (let j = 0; j < starWarsCopy.length; j++) {
       if (Math.random() >= .5) {
@@ -58,30 +68,30 @@ class Gameboard extends React.Component {
       }
       else {
         tempArray.unshift(starWarsCopy[j]);
-      }
-      // console.log(tempArray)
-    }
+      };
+    };
     return tempArray;
-  }
+  };
 
   gameReset = () => {
     //resets all game pieces to clicked = false
     for (let j = 0; j < starWarsImages.length; j++) {
       starWarsImages[j].clicked = false;
-    }
+    };
     this.setState({ starWarsImages: this.shuffleCards(starWarsImages), gameScore: 0 });
-    console.log('line 69')
+    document.getElementById("correctGuessAlert").style.display = "none";
+
     setTimeout(() => {
       document.getElementById("incorrectGuessAlert").style.display = "none";
       document.getElementById("gameStartAlert").style.display = "block";
-    }, 1000)
-  }
+    }, 1000);
+  };
 
   render = () => {
     return (
-      <div>
+      <div className="containingdiv">
         <br />
-        <div id="scoreBox"><span>your score: {this.currentScore}  |  Game high score: {this.currentHighScore}</span></div>
+        <div id="scoreBox"><span>Your score: {this.state.gameScore}  |  High score: {this.state.highScore}</span></div>
 
         <br />
         <h1 className="gameHeader">Click on an image to start, <br />but don't click on an image more than once.</h1>
