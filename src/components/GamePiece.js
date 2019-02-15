@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function GamePiece(props) {
   // console.log(props);
   return (

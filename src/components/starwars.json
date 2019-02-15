@@ -2,73 +2,73 @@
   {
     "id": 1,
     "name": "Awing",
-    "link": "/images/a-wing.png",
+    "link": "./a-wing.png",
     "clicked": false
   },
   {
     "id": 2,
     "name": "Bwing",
-    "link": "/images/b-wing.jpg",
+    "link": "./b-wing.jpg",
     "clicked": false
   },
   {
     "id": 3,
     "name": "Corvette",
-    "link": "/images/corellian_corvette.jpg",
+    "link": "./corellian_corvette.jpg",
     "clicked": false
   },
   {
     "id": 4,
     "name": "Falcon",
-    "link": "/images/millennium-falcon.jpg",
+    "link": "./millennium-falcon.jpg",
     "clicked": false
   },
   {
     "id": 5,
     "name": "Shuttle",
-    "link": "/images/shuttle.jpg",
+    "link": "./shuttle.jpg",
     "clicked": false
   },
   {
     "id": 6,
     "name": "DeathStar",
-    "link": "/images/death-star.jpg",
+    "link": "./death-star.jpg",
     "clicked": false
   },
   {
     "id": 7,
     "name": "SSD",
-    "link": "/images/ssd.jpg",
+    "link": "./ssd.jpg",
     "clicked": false
   },
   {
     "id": 8,
     "name": "Ywing",
-    "link": "/images/y-wing.jpg",
+    "link": "./y-wing.jpg",
     "clicked": false
   },
   {
     "id": 9,
     "name": "TIE",
-    "link": "/images/tie-fighter.jpg",
+    "link": "./tie-fighter.jpg",
     "clicked": false
   },
   {
     "id": 10,
     "name": "TieInt",
-    "link": "/images/tie-interceptor.jpg",
+    "link": "./tie-interceptor.jpg",
     "clicked": false
   },
   {
     "id": 11,
     "name": "StarDestroyer",
-    "link": "/images/stardestroyer.jpg",
+    "link": "./stardestroyer.jpg",
     "clicked": false
   },
   {
     "id": 12,
     "name": "Xwing",
-    "link": "/images/xwing.jpg",
+    "link": "./xwing.jpg",
     "clicked": false
   }
 ]
