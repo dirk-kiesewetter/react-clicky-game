@@ -2,7 +2,7 @@
 
 ![Star Wars Clicky Game](./src/assets/images/react-clicky-game.png)
 
-## [Deployed app](https://tranquil-temple-28656.herokuapp.com/)
+## [Deployed app](https://dirk-kiesewetter.github.io/react-clicky-game/)
 
 ## About the Star Wars Clicky App:
 
@@ -19,6 +19,9 @@ Star Wars Clicky App was written to address the problem of how to create an inte
 - Card shuffling was done with a for loop to iterate through the game piece array, a nested if/else statement and random number logic to determine if the if or else is run. A different sorting method is run with the if portion of the statement than the else portion.
 - The titlebar, gameboard, and game pieces are individual components.
 
+## Demo
+
+![Star Wars Clicky Game demo](./src/assets/gifs/starwars_clicky_demo.gif)
 
 ## Built With
 
