@@ -23,12 +23,15 @@ Star Wars Clicky App was written to address the problem of how to create an inte
 The Star Wars Clicky App can be run from the deployed link, or locally on your machine. 
 To run it locally:
 - clone the `development repository`, or download the files to your computer into a local directory. Make sure that you download from the development branch - the master branch contains the code that is optimized for deployment to a server, which will not run locally.
-![development branch](./src/assets/images/react-clicky-game_development_branch.png)
-- If it is not already installed, install `Node`, as well as `npm` (Node package manager).
-- navigate to the directory the app is located at via the terminal, and type `npm i`. This will install the necessary node modules.
-- move the background image?
-- at the command prompt, type `npm start` to run the app.  
 
+![development branch](./src/assets/images/react-clicky-game_development_branch.png)
+- Install `Node`, as well as `npm` (Node package manager) if you do not have them already installed.
+- Navigate to the directory the app is located at via the terminal, and type `npm i`. This will install the node modules needed to run the app.
+- At the command prompt, type `npm start` to run the app.  
+- The console will display the path that the game is running on. 
+
+![terminal screenshot](./src/assets/images/star-wars-game-running-in-browser.png)
+- Open a browser window, and type the local address shown in the browser (on a PC it is typically `localhost:3000`). On some terminals, such as in Visual Studio Code, the app will open if you `control-click` or `command-click` on the local link in the terminal.
 
 
 ## Demo
@@ -45,7 +48,7 @@ To run it locally:
 - [Yarn](https://yarnpkg.com/en/) 
 
 
-## Authors
+## Author
 
 - [Dirk Kiesewetter](https://github.com/dirk-kiesewetter)
 
